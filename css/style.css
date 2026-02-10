@@ -1,0 +1,538 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  overflow-x: hidden;
+  background-color: #ffffff;
+  color: #000000;
+}
+
+header {
+  margin-top: 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem 9%;
+  background-color: transparent;
+  filter: drop-shadow(10px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #0066ff;
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+
+.logo:hover {
+  transform: scale(1.1);
+}
+
+nav a {
+  font-size: 1.8rem;
+  margin-left: 4rem;
+  color: #000000;
+  font-weight: 500;
+  transition: 0.3s ease;
+  border-bottom: 3px solid transparent;
+}
+
+nav a:hover,
+nav a.active {
+  color: #0061f3;
+  border-bottom: 3px solid #0061f3;
+}
+
+@media (max-width: 995px) {
+  nav {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 40%;
+    border-left: 3px solid #0061f3;
+    border-bottom: 3px solid #0061f3;
+    border-bottom-left-radius: 2rem;
+    padding: 1rem solid;
+    background-color: rgb(255, 255, 255);
+    border-top: 0.1rem solid #0061f3;
+  }
+  nav.active {
+    display: block;
+  }
+
+  nav a {
+    display: block;
+    font-size: 2rem;
+    margin: 3rem 0;
+  }
+
+  nav a:hover,
+  nav a.active {
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border-bottom: 0.5rem solid #0061f3;
+  }
+}
+
+section {
+  padding: 5rem 9% 5rem;
+  scroll-margin-top: 140px;
+}
+
+.home {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15rem;
+  background-color: #ffffff;
+}
+
+.home .home-content h1 {
+  font-size: 6rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.subtitle {
+  font-size: 3.5rem;
+  font-weight: 600;
+  color: #000000;
+  margin-bottom: 0.5rem;
+}
+
+span {
+  color: #0061f3;
+}
+
+.home-img img {
+  position: relative;
+  border-radius: 50%;
+  box-shadow: 0 0 25px solid #0061f3;
+  cursor: pointer;
+  transition: 0.2s linear;
+  object-fit: cover;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.home-img img:hover {
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+
+.social-icons a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 4rem;
+  height: 4rem;
+  font-size: 2rem;
+  background-color: transparent;
+  border: 0.2rem solid #0061f3;
+  border-radius: 50%;
+  margin: 3rem 1.5rem 3rem 0;
+  transition: 0.3s ease;
+  color: #000000;
+}
+
+.social-icons a:hover {
+  color: #000000;
+  transform: scale(1.3) translateY(-5px);
+  background-color: #0061f3;
+  box-shadow: 0 0 25px #0061f3;
+}
+
+.btn {
+  display: inline-block;
+  padding: 1rem 2.8rem;
+  background-color: #ffffff;
+  border-radius: 4rem;
+  color: #0061f3;
+  font-size: 1.6rem;
+  letter-spacing: 0.3rem;
+  border: 2px solid #0061f3;
+  transition: 0.3s ease;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.btn:hover {
+  background-color: #0061f3;
+  color: #000000;
+  transform: scale3d(1.03);
+  box-shadow: 0 0 25px #0061f3;
+}
+
+/* About Me */
+#about {
+  background-color: #f8f9fa;
+  padding: 4rem 5%;
+  margin: 3rem 0;
+  width: 100%;
+  border-top: 1px solid #e0e0e0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+#about h2 {
+  text-align: left;
+  margin-left: 0;
+  margin-bottom: 2rem;
+  font-size: 3.5rem;
+}
+
+#about p {
+  max-width: 100%;
+  font-size: 1.7rem;
+  line-height: 1.8;
+  color: #444;
+  text-align: left;
+}
+#about p {
+  max-width: 2000px;
+}
+
+/* Pendidikan */
+.education-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.education-card {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 22px;
+  width: 250px;
+  text-align: center;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  border: 1px solid #f0f0f0;
+}
+
+.education-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+}
+
+.education-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 8px;
+}
+
+.education-card h3 {
+  font-size: 1.8rem;
+  margin: 5px 0;
+  color: #333;
+  font-weight: 600;
+}
+
+.education-card .year {
+  font-size: 1.2rem;
+  color: #666;
+  font-style: italic;
+  margin: 0;
+  padding: 0;
+}
+
+/* Skills */
+.skill {
+  margin-bottom: 15px;
+}
+
+.skill span {
+  font-weight: bold;
+}
+
+.skill-bar {
+  background-color: #ddd;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-top: 5px;
+}
+
+.skill-level {
+  height: 20px;
+  line-height: 20px;
+  color: white;
+  text-align: right;
+  padding-right: 10px;
+  border-radius: 20px;
+  font-size: 13px;
+}
+
+/* Persentase */
+.skill-level.html {
+  width: 45%;
+  background-color: #e67e22;
+}
+
+.skill-level.css {
+  width: 25%;
+  background-color: #8539c4;
+}
+
+.skill-level.js {
+  width: 20%;
+  background-color: #f1c40f;
+}
+
+.skill-level.java {
+  width: 40%;
+  background-color: #dac56c;
+}
+
+.skill-level.python {
+  width: 50%;
+  background-color: #3687e4;
+}
+
+.skill-level {
+  font-size: 15px;
+}
+
+/* Section */
+section {
+  background-color: #ffffff;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+/* Projects */
+.project-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.project-card {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  padding: 15px;
+  /* width tidak perlu karena diatur grid */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.project-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.project-card h3 {
+  margin-top: 10px;
+  font-size: 1.8rem;
+  color: #000000;
+}
+
+.project-card p {
+  font-size: 1.5rem;
+  color: #000000;
+}
+
+.project-link {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 18px;
+  background-color: #0061f3;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 20px;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 3;
+}
+
+.project-link:hover {
+  background-color: #004bbd;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0, 97, 243, 0.4);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+h2 {
+  color: #000000;
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+section p {
+  font-size: 1.5rem;
+  line-height: 1.8;
+  max-width: 500px;
+}
+
+/* contact */
+#contact {
+  text-align: center;
+  padding: 5rem 9%;
+}
+
+#contact h2 {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+#contact > p {
+  font-size: 1.6rem;
+  color: #555;
+  margin-bottom: 3rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Container Kontak Horizontal */
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px; /* Jarak antar item */
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Item Kontak */
+.contact-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 200px; /* Lebar tetap yang cukup */
+  padding: 20px 15px;
+  transition: all 0.3s ease;
+}
+
+/* Link/Ikon */
+.contact-item a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+  height: 70px;
+  background: linear-gradient(135deg, #0061f3, #3498db);
+  border-radius: 50%;
+  margin-bottom: 15px;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 97, 243, 0.3);
+}
+
+.contact-item a:hover {
+  transform: translateY(-5px) scale(1.1);
+  box-shadow: 0 10px 25px rgba(0, 97, 243, 0.5);
+}
+
+/* Ikon */
+.contact-item i {
+  font-size: 28px;
+  color: white;
+}
+
+/* Teks */
+.contact-item p {
+  font-size: 1.4rem;
+  color: #333;
+  margin: 0;
+  line-height: 1.5;
+  text-align: center;
+  font-weight: 500;
+}
+
+/* ===== NAVBAR BACKGROUND ON TOP ===== */
+header {
+  transition:
+    background-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+/* kondisi SAAT DI ATAS */
+header.top {
+  background-color: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* kondisi SAAT SCROLL */
+header.scrolled {
+  background-color: transparent;
+  box-shadow: none;
+}
+
+/* ===== NAVBAR ACTIVE ===== */
+.navbar a.active {
+  color: #0061f3;
+  font-weight: 600;
+}
+
+/* ===== LOGO EFFECT ===== */
+.logo {
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+header.scrolled .logo {
+  color: #0061f3;
+  transform: scale(0.95);
+}
+
+header.active {
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+section {
+  scroll-margin-top: 100px;
+}
+
+/* ===== CENTER ALL SECTION TITLES ===== */
+#about h2,
+#education h2,
+#skills h2,
+#proyek h2,
+#contact h2 {
+  text-align: center;
+  display: block;
+  width: 100%;
+  margin: 0 auto 2rem auto;
+  position: relative;
+}
+
+/* Atau lebih simple: */
+section > h2 {
+  text-align: center !important;
+}
